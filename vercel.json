@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        { "source": "/semana-1", "destination": "/semana-1.html" },
+        { "source": "/semana-2", "destination": "/semana-2.html" },
+        { "source": "/semana-3", "destination": "/semana-3.html" },
+        { "source": "/(.*)", "destination": "/$1" }
+    ]
+}

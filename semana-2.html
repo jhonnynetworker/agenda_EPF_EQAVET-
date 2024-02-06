@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORARIOS EPF - SEMANA 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.0.2/turn.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .pdf-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .pdf-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 80%;
+        }
+        
+        .navigation-buttons {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .navigation-buttons button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pdf-container">
+        <div class="pdf-title">SEMANA 2</div>
+        <div class="pdf-viewer">
+            <iframe src="PDF/Hor Turmas 2324 S2 2P.pdf" width="100%" height="100%" style="border: none;"></iframe>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="redirectTo('semana-1.html')">Ir para SEMANA 1</button>
+            <button onclick="redirectTo('semana-3.html')">Ir para SEMANA 3</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.0.2/turn.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".pdf-container").turn({
+                width: "100vw",
+                height: "100vh",
+                autoCenter: true
+            });
+        });
+
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+
+</html>
